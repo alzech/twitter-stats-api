@@ -31,6 +31,12 @@ GET /api/hashtags?numTags=10
     - 500 : unknown exception
     
 **Configuration**
-configuration values (such as the api token) can be updated in the appsettings.{env}.json file found in the \src\TwitterStatistics folder
+- configuration values can be updated in the appsettings.{env}.json file found in the \src\TwitterStatistics folder
+- the twitter access token, accesstoken secret and bearer token are required for the app to access the twitter api
+  - ClientAuthSettings:ApiKey -- twitter api key
+  - ClientAuthSettings:ApiKeySecret  -- twitter api key secret
+  - ClientAuthSettings:AccessToken"  -- twitter access token
+  - ClientAuthSettings:AccessTokenSecret  -- twitter access token secret
+  - ClientAuthSettings:BrearerToken  -- twitter bearer token
 
     
