@@ -39,4 +39,8 @@ GET /api/hashtags?numTags=10
   - ClientAuthSettings:AccessTokenSecret  -- twitter access token secret
   - ClientAuthSettings:BrearerToken  -- twitter bearer token
 
+**TODO**:
+ - build out more tests for different scenarios such as exceptions
+ - add authentication and authorization
+ - set up appsettings.json for different environments
     
