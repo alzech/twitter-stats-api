@@ -33,12 +33,12 @@ namespace TwitterStatistics.IntegrationTests
             var httpClient = webAppFactory.CreateDefaultClient();
 
             //act
-            var startResp = await httpClient.GetAsync("api/sample-stream/start");
+            var startResp = await httpClient.PutAsync("api/sample-stream/start", null);
             await Task.Delay(1000);
             var firstResp = await httpClient.GetAsync("api/tweets/count");
             await Task.Delay(2000);
             var secondResp = await httpClient.GetAsync("api/tweets/count");
-            var stopResp = await httpClient.GetAsync("api/sample-stream/stop");
+            var stopResp = await httpClient.PutAsync("api/sample-stream/stop", null);
 
             //assert
             var firstStringResp = await firstResp.Content.ReadAsStringAsync();

@@ -14,7 +14,7 @@ namespace TwitterStatistics.Stream
             _twSTream = twStream;
         }
 
-        [HttpGet("start")]
+        [HttpPut("start")]
         public async Task<IActionResult> StartStream()
         {
             var started = await _twSTream.Start();
@@ -35,7 +35,7 @@ namespace TwitterStatistics.Stream
             return StatusCode(503, "stream did not start in time");
         }
 
-        [HttpGet("stop")]
+        [HttpPut("stop")]
         public IActionResult StopStream()
         {
             _twSTream.Stop();
